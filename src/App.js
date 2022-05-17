@@ -32,7 +32,7 @@ return (
     <h1>The Department Of Computer Science</h1>
       <p className="CurrentWeather">{info.data}</p>
     </div>
-    <div className="t2">
+    <div className="container" className="t2">
     {data.map(item=>(
   <li key={item.id}>
     {item.data}  {item.timeStp}
