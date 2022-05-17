@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { React } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [data,setData] = useState([]);
+  const [info,setInfo] = useState({});
+
+useEffect(()=>{
+  fetch("https://wombz.pythonanywhere.com/")
+    .then(res => res.json())
+    .then(
+      (result) => {
+        console.log(result)
+        setData(result)
+        setInfo(result[result.length -1])
+      },
+      (error) => {
+      }
+    )
+   setInterval(() => {
+     window.location.reload()
+    }, 
+    60000);
+},[])
+
+
+
+return (
+  <>
+    <div className="t1">
+    <h1>The Department Of Computer Science</h1>
+      <p className="CurrentWeather">{info.data}</p>
     </div>
+    <div className="t2">
+    {data.map(item=>(
+  <li key={item.id}>
+    {item.data}  {item.timeStp}
+  </li>
+    ))}
+  
+    </div>
+  </>
   );
 }
 
