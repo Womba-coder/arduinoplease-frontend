@@ -94,11 +94,13 @@ return (
     <h1 className="name1">Temperature</h1>
   <GaugeChart id="gauge-chart2" percent={info.temperature/100}
   formatTextValue={value=>value + '°C'}
+  nrOfLevels={20}
   />
   </div>
   <div>
   <h1 className="name2">Humidity</h1>
   <GaugeChart id="gauge-chart2"  percent={info.humidity/100}
+   nrOfLevels={20}
   />
   </div>
   </div>
