@@ -79,14 +79,41 @@ body {
 
 .t1{
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 
 .t2{
   text-align: center;
   font-size: small;
+<<<<<<< HEAD
 
+=======
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  border-top: 7px solid #011d24;
+  border-bottom: 7px solid #011d24;
+  border-left: 7px solid #011d24;
+  border-right: 7px solid #011d24;
+  grid-auto-rows: 0.5fr;
+  padding: 5px 5px 5px;
+  row-gap: 4ch;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "."
+    "."
+    "."
+    "."
+    ".";
+>>>>>>> 5821bbcfdbefb1021d128e2860d1032a3423e3ca
 }
 
 

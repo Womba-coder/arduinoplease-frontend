@@ -13,7 +13,7 @@ export default function Dashboard() {
   const [info,setInfo] = useState({});
 
 useEffect(()=>{
-    fetch("http://127.0.0.1:8000/")
+    fetch("https://wombz2.pythonanywhere.com/")
       .then(res => res.json())
       .then(
         (result) => {
@@ -26,7 +26,7 @@ useEffect(()=>{
       )
  
 setInterval(() => {
-  fetch("http://127.0.0.1:8000/")
+  fetch("https//wombz2.pythonanywhere.com/")
     .then(res => res.json())
     .then(
       (result) => {
