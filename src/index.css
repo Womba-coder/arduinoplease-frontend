@@ -1,6 +1,7 @@
+
 body {
   
-    background-image: url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&w=1000&q=80');
+  background-color: whitesmoke;
   margin: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,35 +15,79 @@ body {
   font-weight: bold;
 }
 
+.heading{
+  text-align: center;
+}
+
+
+.gauge{
+ 
+  background-color: black;
+  display: grid; 
+  grid-auto-rows: 0.5fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 1px 1px; 
+  grid-template-areas: 
+    ". ."; 
+  justify-content: center; 
+  
+}
+
+.chart{
+  display: grid; 
+  grid-auto-rows: 0.5fr; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 1px 1px; 
+  grid-template-areas: 
+    "."; 
+  justify-content: center; 
+  align-content: center; 
+  justify-items: center; 
+  align-items: center;
+}
+
+.name{
+  text-align: center;
+}
+
+.name1{
+  text-align: center;
+  color: white;
+}
+
+.name2{
+  text-align: center;
+  color: white;
+}
+
+.loginArea{
+  display: grid; 
+  grid-auto-rows: 0.5fr; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 1px 1px; 
+  grid-template-areas: 
+    "."
+    "."; 
+  justify-content: center; 
+  align-content: center; 
+  justify-items: center; 
+  align-items: center;
+}
+
 .t1{
   text-align: center;
   font-size: 40px;
 }
 
+
 .t2{
   text-align: center;
   font-size: small;
-}
 
-.container {  
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-  gap: 69px 1px;
-  grid-auto-flow: row;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
-  grid-template-areas:
-    "."
-    "."
-    "."
-    "."
-    ".";
 }
-
-  
 
 
 code {

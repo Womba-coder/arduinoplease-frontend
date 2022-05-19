@@ -1,46 +1,23 @@
 import { React } from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
+
+
+import Dashboard from "./components/dashboard";
+import Login from './components/login';
 
 function App() {
-  const [data,setData] = useState([]);
-  const [info,setInfo] = useState({});
-
-useEffect(()=>{
-  fetch("https://wombz.pythonanywhere.com/")
-    .then(res => res.json())
-    .then(
-      (result) => {
-        console.log(result)
-        setData(result)
-        setInfo(result[result.length -1])
-      },
-      (error) => {
-      }
-    )
-   setInterval(() => {
-     window.location.reload()
-    }, 
-    60000);
-},[])
-
-
-
-return (
-  <>
-    <div className="t1">
-    <h1>The Department Of Computer Science</h1>
-      <p className="CurrentWeather">{info.data}</p>
-    </div>
-    <div className="t2">
-    {data.map(item=>(
-  <li key={item.id}>
-    {item.data}  {item.timeStp}
-  </li>
-    ))}
   
-    </div>
-  </>
+return (
+  <div>
+    <h1 className="heading">CS Temperature and Humidity portal</h1>
+    <BrowserRouter>
+     <Routes>
+      <Route path='/' element={<Login/>}/>
+      <Route path='/dashboard' element={<Dashboard/>}/>
+      </Routes>
+    </BrowserRouter>
+  </div>
+
   );
 }
 
