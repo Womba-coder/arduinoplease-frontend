@@ -85,10 +85,8 @@ body {
 
 .t2{
   text-align: center;
+  
   font-size: small;
-<<<<<<< HEAD
-
-=======
   
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -113,7 +111,6 @@ body {
     "."
     "."
     ".";
->>>>>>> 5821bbcfdbefb1021d128e2860d1032a3423e3ca
 }
 
 
